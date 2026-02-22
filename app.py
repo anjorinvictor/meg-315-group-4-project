@@ -307,7 +307,7 @@ with st.popover("✨"):
                 with chat_container:
                     st.chat_message("user").write(user_msg)
                     with st.spinner("Aura is analyzing..."):
-                        ai_model = init_ai("AIzaSyCelsIjIPyMVEkyJzX6TLGgfaWmuAuqdfg")
+                        ai_model = init_ai("AIzaSyAPBUZmK8c1qXW-IPimq85M2uTty3bnae4")
                         gas = st.session_state.gas_results
                         steam = st.session_state.steam_results
                         htc = st.session_state.htc_results
