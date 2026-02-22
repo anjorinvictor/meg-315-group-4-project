@@ -1,0 +1,13 @@
+# Environments & Secrets (CRITICAL for API Security)
+.env
+.streamlit/secrets.toml
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# User-specific tools
+.vscode/
+.idea/
