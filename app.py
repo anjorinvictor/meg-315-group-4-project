@@ -307,7 +307,13 @@ with st.popover("✨"):
                 with chat_container:
                     st.chat_message("user").write(user_msg)
                     with st.spinner("Aura is analyzing..."):
-                        ai_model = init_ai("AIzaSyAPBUZmK8c1qXW-IPimq85M2uTty3bnae4")
+                        try:
+                            api_key = st.secrets["GEMINI_API_KEY"]
+                        except KeyError:
+                            st.error("API Key not found! Please add GEMINI_API_KEY to your Streamlit secrets or `.streamlit/secrets.toml` file.")
+                            st.stop()
+                        
+                        ai_model = init_ai(api_key)
                         gas = st.session_state.gas_results
                         steam = st.session_state.steam_results
                         htc = st.session_state.htc_results
